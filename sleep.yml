@@ -1,0 +1,14 @@
+---
+- name: Sleep Playbook
+  hosts: all
+  gather_facts: false
+  tasks:
+    - debug:
+        msg: do
+
+    - name: sleep
+      command: sleep 300
+
+    - debug:
+        msg: done
+
