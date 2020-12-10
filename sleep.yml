@@ -9,6 +9,12 @@
     - name: sleep
       command: sleep 300
 
+    - name: create file
+      file:
+        path: "/tmp/foo_{{ tower_job_id }}"
+        state: touch
+        mode: 0644
+
     - debug:
         msg: done
 
